@@ -4,6 +4,14 @@ namespace ContactUs.Models
 {
     public class ContactData
     {
+        public ContactData()
+        {
+            FirstName = string.Empty;
+            LastName = string.Empty;
+            Email = string.Empty;
+            Message = string.Empty;
+        }
+
         [Required(ErrorMessage = "First Name is required")]
         public string FirstName { get; set; }
         [Required(ErrorMessage = "Last Name is required")]
