@@ -69,3 +69,8 @@ textarea {
 .form-group {
     margin-bottom: 15px;
 }
+
+/* Felt like making my own "text danger" style so I could remove bootstrap as a library */
+.text-danger {
+    color: red;
+}
