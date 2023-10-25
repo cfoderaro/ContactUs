@@ -1,0 +1,34 @@
+﻿@model ContactUs.Models.ContactData
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container">
+    <h1>Contact Us Form</h1>
+    <form asp-action="Post" class="input-form">
+        <div class="form-group">
+            <label asp-for="FirstName">First Name</label>
+            <input type="text" asp-for="FirstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Last Name</label>
+            <input type="text" asp-for="LastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input type="text" asp-for="Email">
+        </div>
+        <div class="form-group">
+            <label asp-for="Message">Message</label>
+            <textarea typeof="text" asp-for="Message"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
