@@ -4,6 +4,14 @@ namespace ContactUs.Models
 {
     public class ContactData
     {
+        public ContactData(string firstName, string lastName, string email, string message)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Message = message;
+        }
+
         public ContactData()
         {
             FirstName = string.Empty;

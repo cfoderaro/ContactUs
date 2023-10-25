@@ -26,7 +26,7 @@ namespace ContactUs.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return await Task.FromResult(View(contactData));
+                return await Task.FromResult(View("Index", new ContactData(contactData.FirstName, contactData.LastName, contactData.Email, contactData.Message)));
             }
             else
             {
